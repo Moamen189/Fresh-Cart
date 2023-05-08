@@ -9,12 +9,14 @@ import { BrandsComponent } from './brands/brands.component';
 import { LoginComponent } from './login/login.component';
 import { RegisterComponent } from './register/register.component';
 import { NotFoundComponent } from './not-found/not-found.component';
+import { ProductsComponent } from './products/products.component';
 
 const routes: Routes = [
   {path:'' , redirectTo:'home',pathMatch:'full'},
   {path:'home' , component:HomeComponent},
   {path:'about' , component:AboutComponent},
   {path:'categories' , component:CategoriesComponent},
+  {path:'products' , component:ProductsComponent},
   {path:'cart' , component:CartComponent},
   {path:'brands' , component:BrandsComponent},
   {path:'login' , component:LoginComponent},
