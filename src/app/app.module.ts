@@ -1,4 +1,4 @@
-/* eslint-disable @typescript-eslint/no-unused-vars */
+
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { ReactiveFormsModule } from '@angular/forms';
@@ -32,9 +32,12 @@ import { ProductsComponent } from './products/products.component';
     ProductsComponent
   ],
   imports: [
-    BrowserModule,
+   BrowserModule,
     AppRoutingModule,
-    ReactiveFormsModule,
+    ReactiveFormsModule
+
+
+
   ],
   providers: [],
   bootstrap: [AppComponent]
