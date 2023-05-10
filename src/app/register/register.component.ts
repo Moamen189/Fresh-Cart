@@ -18,6 +18,12 @@ import { FormGroup , FormControl } from '@angular/forms';
 
   })
 
+  handlelRegister(registerForm:FormGroup){
+
+    console.log(registerForm)
+
+  }
+
   // constructor() { }
 
   // ngOnInit(): void {
