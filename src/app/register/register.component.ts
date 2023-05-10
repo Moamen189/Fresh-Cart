@@ -14,7 +14,7 @@ import { FormGroup , FormControl } from '@angular/forms';
     email: new FormControl(null),
     password: new FormControl(null),
     rePassword: new FormControl(null),
-    Phone: new FormControl(null),
+    phone: new FormControl(null),
 
   })
 
