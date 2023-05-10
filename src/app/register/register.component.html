@@ -1,5 +1,20 @@
 <div class="w-75 mx-auto py-4">
   <h4>Register Now :</h4>
 
-  <form action=""></form>
+  <form [formGroup]="registerForm">
+    <label for="name">name :</label>
+    <input formControlName="name" type="text" class="form-control mb-2" id="name">
+
+    <label for="email">Email :</label>
+    <input formControlName="email" type="email" class="form-control mb-2" id="email">
+
+    <label for="password">Password :</label>
+    <input formControlName="password" type="text" class="form-control mb-2" id="password">
+
+    <label for="rePassword">Re-Password :</label>
+    <input formControlName="rePassword" type="text" class="form-control mb-2" id="rePassword">
+
+    <label for="Phone">Phone :</label>
+    <input formControlName="Phone" type="text" class="form-control mb-2" id="Phone">
+  </form>
 </div>
