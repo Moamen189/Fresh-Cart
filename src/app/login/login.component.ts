@@ -32,7 +32,7 @@ export class LoginComponent  {
         },
         error: (err) => {
           this.isLoading = false;
-          this._Router.navigate(['/home'])
+          this._Router.navigate(['/register'])
         }
       })
     }
