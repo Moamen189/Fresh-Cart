@@ -1,6 +1,10 @@
 
 import { Component } from '@angular/core';
 import { FormGroup , FormControl , Validator, Validators } from '@angular/forms';
+import { AuthService } from '../auth.service';
+import { Router } from '@angular/router';
+
+
 
 @Component({
   selector: 'app-register',
@@ -8,7 +12,7 @@ import { FormGroup , FormControl , Validator, Validators } from '@angular/forms'
   styleUrls: ['./register.component.css']
 })
  export class RegisterComponent  {
-
+  constructor(private _AuthService:AuthService , private _Router:Router) { }
   registerForm:FormGroup = new FormGroup ({
     name: new FormControl(null , [Validators.required , Validators.minLength(3) , Validators.maxLength(15)]),
     email: new FormControl(null , [Validators.required , Validators.email]),
@@ -20,7 +24,23 @@ import { FormGroup , FormControl , Validator, Validators } from '@angular/forms'
 
   handlelRegister(registerForm:FormGroup){
 
-    console.log(registerForm.value)
+    if(registerForm.valid){
+      this._AuthService.regiser(registerForm.value).subscribe({
+
+        next: (response) => {
+
+
+            this._Router.navigate(['/login'])
+
+
+        },
+        error: (err) => {
+          this._Router.navigate(['/login'])
+        }
+      })
+    }
+
+
 
   }
 
