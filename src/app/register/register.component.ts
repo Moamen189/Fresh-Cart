@@ -26,7 +26,7 @@ import { Router } from '@angular/router';
   handlelRegister(registerForm:FormGroup){
     this.isLoading = true;
     if(registerForm.valid){
-      this._AuthService.regiser(registerForm.value).subscribe({
+      this._AuthService.register(registerForm.value).subscribe({
 
         next: (response) => {
 
