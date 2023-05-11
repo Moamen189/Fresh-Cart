@@ -46,6 +46,13 @@
 
     </div>
 
-    <button [disabled]="registerForm.invalid" type="submit" class="btn ms-auto d-block border-0 border-none text-white bg-main">Register</button>
+    <button [disabled]="registerForm.invalid" type="submit" class="btn ms-auto d-block border-0 border-none text-white bg-main">
+
+      <i *ngIf="isLoading" class="fas fa-spinner fa-spin"></i>
+
+      <span *ngIf="!isLoading">Register</span>
+
+
+    </button>
   </form>
 </div>
