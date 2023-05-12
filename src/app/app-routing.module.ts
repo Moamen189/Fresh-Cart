@@ -10,10 +10,11 @@ import { LoginComponent } from './login/login.component';
 import { RegisterComponent } from './register/register.component';
 import { NotFoundComponent } from './not-found/not-found.component';
 import { ProductsComponent } from './products/products.component';
-
+import { AuthGuard } from './auth.guard';
+//,canActivate:[AuthGuard]
 const routes: Routes = [
   {path:'' , redirectTo:'home',pathMatch:'full'},
-  {path:'home' , component:HomeComponent},
+  {path:'home'  ,component:HomeComponent},
   {path:'about' , component:AboutComponent},
   {path:'categories' , component:CategoriesComponent},
   {path:'products' , component:ProductsComponent},
