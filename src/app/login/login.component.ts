@@ -10,6 +10,7 @@ import { Router } from '@angular/router';
 export class LoginComponent  {
   constructor(private _AuthService:AuthService , private _Router:Router) { }
   isLoading:boolean = false;
+  //apiError:string = '';
   loginForm:FormGroup = new FormGroup ({
     email: new FormControl(null , [Validators.required , Validators.email]),
     password: new FormControl(null , [Validators.required , Validators.pattern(/^[A-Z]/)]),
@@ -26,13 +27,15 @@ export class LoginComponent  {
 
 
           this.isLoading = false;
+          localStorage.setItem('userToken' , response.token)
             this._Router.navigate(['/home'])
 
 
         },
         error: (err) => {
           this.isLoading = false;
-          this._Router.navigate(['/register'])
+          this._Router.navigate(['/home'])
+          //this.apiError = err.error.errors.msg
         }
       })
     }

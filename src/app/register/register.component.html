@@ -1,6 +1,9 @@
 <div class="w-75 mx-auto py-4">
-  <h4>Register Now :</h4>
 
+  <h4>Register Now :</h4>
+  <!-- <div *ngIf="apiError.length > 0" class="alert alert-danger">
+      {{apiError}}
+  </div> -->
   <form (ngSubmit)="handlelRegister(registerForm)" [formGroup]="registerForm">
     <label for="name">Name :</label>
     <input formControlName="name" type="text" class="form-control mb-2" id="name">

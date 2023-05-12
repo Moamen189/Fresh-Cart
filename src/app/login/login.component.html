@@ -1,6 +1,8 @@
 <div class="w-75 mx-auto py-4">
   <h4>Login Now :</h4>
-
+  <!-- <div *ngIf="apiError.length > 0" class="alert alert-danger">
+    {{apiError}}
+  </div> -->
   <form (ngSubmit)="handlelLogin(loginForm)" [formGroup]="loginForm">
 
     <label for="email">Email :</label>
@@ -26,7 +28,7 @@
 
       <i *ngIf="isLoading" class="fas fa-spinner fa-spin"></i>
 
-      <span *ngIf="! isLoading">Login</span>
+      <span *ngIf="!isLoading">Login</span>
 
 
     </button>
