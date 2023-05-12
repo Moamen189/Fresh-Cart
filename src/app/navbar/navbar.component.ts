@@ -9,11 +9,18 @@ import { AuthService } from '../auth.service';
 export class NavbarComponent implements OnInit {
   isLogin:boolean = false ;
   constructor(private _AuthService:AuthService ) {
-    if(_AuthService.userData != null){
-      this.isLogin = true
-    }else{
-      this.isLogin = false
-    }
+    this._AuthService.userData.subscribe ({
+      next:() =>{
+
+        if(_AuthService.userData.getValue() == null){
+          this.isLogin = true
+        }else{
+          this.isLogin = false
+        }
+
+      }
+    })
+
   }
 
   ngOnInit(): void {

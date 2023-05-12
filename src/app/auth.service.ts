@@ -1,8 +1,8 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import jwtDecode from 'jwt-decode';
-
-import { Observable } from 'rxjs';
+import { Router } from '@angular/router';
+import { Observable , BehaviorSubject  } from 'rxjs';
 
 
 
@@ -10,8 +10,8 @@ import { Observable } from 'rxjs';
   providedIn: 'root'
 })
 export class AuthService {
-  userData = null;
-  constructor(private _httpClient:HttpClient) { }
+  userData = new BehaviorSubject(null);
+  constructor(private _httpClient:HttpClient , private _Router:Router) { }
 
   register(userData:object):Observable<any>
   {
@@ -27,7 +27,15 @@ export class AuthService {
     let encodedToken = JSON.stringify(localStorage.getItem('userToken'))
      let decodedToken:any  = jwtDecode(encodedToken)
 
-     this.userData = decodedToken
+     this.userData.next(decodedToken);
+
+  }
+
+  logOut(){
+    localStorage.removeItem('userToken');
+    this.userData.next(null);
+    this._Router.navigate(['/login'])
+
 
   }
 
