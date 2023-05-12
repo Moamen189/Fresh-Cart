@@ -11,7 +11,13 @@ import { Observable , BehaviorSubject  } from 'rxjs';
 })
 export class AuthService {
   userData = new BehaviorSubject(null);
-  constructor(private _httpClient:HttpClient , private _Router:Router) { }
+  constructor(private _httpClient:HttpClient , private _Router:Router) {
+    if(localStorage.getItem('userToken') !== null){
+
+      this.decodedUserData()
+
+    }
+   }
 
   register(userData:object):Observable<any>
   {
