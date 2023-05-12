@@ -2,7 +2,7 @@ import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import jwtDecode from 'jwt-decode';
 
-import { Observable, observable } from 'rxjs';
+import { Observable } from 'rxjs';
 
 
 
@@ -25,7 +25,9 @@ export class AuthService {
 
   decodedUserData(){
     let encodedToken = JSON.stringify(localStorage.getItem('userToken'))
-     let decodedToken  = jwtDecode(encodedToken)
+     let decodedToken:any  = jwtDecode(encodedToken)
+
+     this.userData = decodedToken
 
   }
 

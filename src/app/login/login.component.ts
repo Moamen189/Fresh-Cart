@@ -28,6 +28,7 @@ export class LoginComponent  {
 
           this.isLoading = false;
           localStorage.setItem('userToken' , response.token)
+          this._AuthService.decodedUserData()
             this._Router.navigate(['/home'])
 
 
