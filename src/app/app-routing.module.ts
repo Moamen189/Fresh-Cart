@@ -11,6 +11,7 @@ import { RegisterComponent } from './register/register.component';
 import { NotFoundComponent } from './not-found/not-found.component';
 import { ProductsComponent } from './products/products.component';
 import { AuthGuard } from './auth.guard';
+import { PrdouctdetailsComponent } from './prdouctdetails/prdouctdetails.component';
 //,canActivate:[AuthGuard]
 const routes: Routes = [
   {path:'' , redirectTo:'home',pathMatch:'full'},
@@ -18,6 +19,8 @@ const routes: Routes = [
   {path:'about' , component:AboutComponent},
   {path:'categories' , component:CategoriesComponent},
   {path:'products' , component:ProductsComponent},
+  {path:'productDetails/:id' , component:PrdouctdetailsComponent},
+
   {path:'cart' , component:CartComponent},
   {path:'brands' , component:BrandsComponent},
   {path:'login' , component:LoginComponent},

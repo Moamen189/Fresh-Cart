@@ -16,6 +16,7 @@ import { NotFoundComponent } from './not-found/not-found.component';
 import { RegisterComponent } from './register/register.component';
 import { ProductsComponent } from './products/products.component';
 import { HttpClientModule } from '@angular/common/http';
+import { PrdouctdetailsComponent } from './prdouctdetails/prdouctdetails.component';
 
 
 @NgModule({
@@ -31,7 +32,8 @@ import { HttpClientModule } from '@angular/common/http';
     NavbarComponent,
     NotFoundComponent,
     RegisterComponent,
-    ProductsComponent
+    ProductsComponent,
+    PrdouctdetailsComponent
   ],
   imports: [
    BrowserModule,
