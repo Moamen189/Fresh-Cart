@@ -1,1 +1,22 @@
-<p>prdouctdetails works!</p>
+<div class="row align-items-center py-4">
+  <div class="col-md-4">
+    <img class="w-100" src={{ProductData?.imageCover}} alt="">
+ </div>
+
+<div class="col-md-8">
+  <h2 class="h4 fw-bolder mb-2">{{ProductData?.title}}</h2>
+  <p class="text-muted p-3">{{ProductData?.description}}</p>
+  <div class="d-flex align-items-center justify-content-between">
+    <span class="text-muted fw-bold font-sm">{{ProductData?.price}}</span>
+    <div>
+
+      <i class="fas fa-star rating-color"></i>
+     <span class="text-muted fw-bold font-sm">{{ProductData?.ratingsAverage}}</span>
+
+    </div>
+
+  </div>
+
+  <button class="btn bg-main text-white w-100 my-2">+ Add</button>
+</div>
+</div>
