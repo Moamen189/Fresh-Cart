@@ -26,6 +26,7 @@ const routes: Routes = [
   {path:'login' , component:LoginComponent},
   {path:'register' , component:RegisterComponent},
   {path:'settings' , loadChildren:() => import('./settings/settings.module').then((m)=>m.SettingsModule)},
+  { path: 'customers', loadChildren: () => import('./customers/customers.module').then(m => m.CustomersModule) },
 
   {path:'**' , component:NotFoundComponent},
 ];
