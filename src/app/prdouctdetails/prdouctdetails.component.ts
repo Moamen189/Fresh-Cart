@@ -24,7 +24,7 @@ export class PrdouctdetailsComponent implements OnInit {
 
   customOptions: OwlOptions = {
     loop: true,
-    mouseDrag: false,
+    mouseDrag: true,
     touchDrag: false,
     pullDrag: false,
     dots: false,
@@ -34,15 +34,6 @@ export class PrdouctdetailsComponent implements OnInit {
       0: {
         items: 1
       },
-      400: {
-        items: 2
-      },
-      740: {
-        items: 3
-      },
-      940: {
-        items: 4
-      }
     },
     nav: true
   }
