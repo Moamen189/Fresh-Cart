@@ -17,7 +17,8 @@ import { RegisterComponent } from './register/register.component';
 import { ProductsComponent } from './products/products.component';
 import { HttpClientModule } from '@angular/common/http';
 import { PrdouctdetailsComponent } from './prdouctdetails/prdouctdetails.component';
-
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { CarouselModule } from 'ngx-owl-carousel-o';
 
 @NgModule({
   declarations: [
@@ -39,7 +40,9 @@ import { PrdouctdetailsComponent } from './prdouctdetails/prdouctdetails.compone
    BrowserModule,
     AppRoutingModule,
     ReactiveFormsModule,
-    HttpClientModule
+    HttpClientModule,
+    BrowserAnimationsModule,
+    CarouselModule
 
 
 
