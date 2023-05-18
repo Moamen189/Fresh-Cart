@@ -20,6 +20,7 @@ import { PrdouctdetailsComponent } from './prdouctdetails/prdouctdetails.compone
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { CarouselModule } from 'ngx-owl-carousel-o';
 import { MainsliderComponent } from './mainslider/mainslider.component';
+import { BuyPipe } from './buy.pipe';
 
 @NgModule({
   declarations: [
@@ -36,7 +37,8 @@ import { MainsliderComponent } from './mainslider/mainslider.component';
     RegisterComponent,
     ProductsComponent,
     PrdouctdetailsComponent,
-    MainsliderComponent
+    MainsliderComponent,
+    BuyPipe
   ],
   imports: [
    BrowserModule,

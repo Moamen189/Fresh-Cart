@@ -6,10 +6,10 @@
     <div class="product px-2 py-4">
       <a [routerLink]="['/productDetails' , product._id]">
         <img class="w-100" src={{product.imageCover}} alt="">
-        <span class="text-main fw-bold font-sm">{{product.category.name}}</span>
+        <span class="text-main fw-bold font-sm">{{product.category.name | uppercase}}</span>
         <h3 class="h6 fw-bolder">{{product.title.split(' ').slice(0,2).join(' ')}}</h3>
         <div class="d-flex align-items-center justify-content-between">
-          <span class="text-muted fw-bold font-sm">{{product.price}} EGP</span>
+          <span class="text-muted fw-bold font-sm">{{product.price | buy}} </span>
           <div>
 
             <i class="fas fa-star rating-color"></i>
