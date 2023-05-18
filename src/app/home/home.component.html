@@ -2,7 +2,10 @@
 <app-categories></app-categories>
 <app-brands></app-brands>
 <div class="row">
-  <div *ngFor="let product of products" class="col-md-2">
+  <!-- //|search:searchTerm -->
+  <div>  <input [(ngModel)]="searchTerm" type="text" placeholder="Seach by name" class="form-control w-75 mx-auto my-4" name="" id=""></div>
+
+  <div *ngFor="let product of products | search:searchTerm " class="col-md-2">
     <div class="product px-2 py-4">
       <a [routerLink]="['/productDetails' , product._id]">
         <img class="w-100" src={{product.imageCover}} alt="">

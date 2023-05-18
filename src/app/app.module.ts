@@ -1,7 +1,7 @@
 
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-import { ReactiveFormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { AboutComponent } from './about/about.component';
@@ -21,6 +21,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { CarouselModule } from 'ngx-owl-carousel-o';
 import { MainsliderComponent } from './mainslider/mainslider.component';
 import { BuyPipe } from './buy.pipe';
+import { SearchPipe } from './search.pipe';
 
 @NgModule({
   declarations: [
@@ -38,7 +39,8 @@ import { BuyPipe } from './buy.pipe';
     ProductsComponent,
     PrdouctdetailsComponent,
     MainsliderComponent,
-    BuyPipe
+    BuyPipe,
+    SearchPipe
   ],
   imports: [
    BrowserModule,
@@ -46,7 +48,8 @@ import { BuyPipe } from './buy.pipe';
     ReactiveFormsModule,
     HttpClientModule,
     BrowserAnimationsModule,
-    CarouselModule
+    CarouselModule,
+    FormsModule
 
 
 
