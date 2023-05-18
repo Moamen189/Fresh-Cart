@@ -12,7 +12,15 @@ import { Router } from '@angular/router';
   styleUrls: ['./register.component.css']
 })
  export class RegisterComponent  {
-  constructor(private _AuthService:AuthService , private _Router:Router) { }
+  constructor(private _AuthService:AuthService , private _Router:Router) {
+    if(localStorage.getItem('userToken') !== null){
+      this._Router.navigate(['/home'])
+    }else{
+      //this._Router.navigate(['/login'])
+
+      this._Router.navigate(['/home'])
+    }
+   }
   isLoading:boolean = false;
   //apiError:string = '';
   registerForm:FormGroup = new FormGroup ({
