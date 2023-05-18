@@ -19,6 +19,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { PrdouctdetailsComponent } from './prdouctdetails/prdouctdetails.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { CarouselModule } from 'ngx-owl-carousel-o';
+import { MainsliderComponent } from './mainslider/mainslider.component';
 
 @NgModule({
   declarations: [
@@ -34,7 +35,8 @@ import { CarouselModule } from 'ngx-owl-carousel-o';
     NotFoundComponent,
     RegisterComponent,
     ProductsComponent,
-    PrdouctdetailsComponent
+    PrdouctdetailsComponent,
+    MainsliderComponent
   ],
   imports: [
    BrowserModule,
