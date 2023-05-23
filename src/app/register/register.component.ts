@@ -18,7 +18,7 @@ import { Router } from '@angular/router';
     }else{
       //this._Router.navigate(['/login'])
 
-      this._Router.navigate(['/home'])
+      this._Router.navigate(['/register'])
     }
    }
   isLoading:boolean = false;

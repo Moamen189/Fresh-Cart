@@ -14,7 +14,7 @@ export class LoginComponent  {
     }else{
       //this._Router.navigate(['/login'])
 
-      this._Router.navigate(['/home'])
+      this._Router.navigate(['/login'])
     }
   }
   isLoading:boolean = false;
