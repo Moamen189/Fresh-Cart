@@ -8,13 +8,14 @@ import { CartService } from '../cart.service';
   styleUrls: ['./cart.component.css']
 })
 export class CartComponent implements OnInit {
+  cartDetails:any = null;
 
   constructor(private _CartService:CartService) { }
 
   ngOnInit(): void {
 
     this._CartService.GetLoggedUserCart().subscribe({
-      next:(res) => res.data,
+      next:(res) =>{this.cartDetails = res.data },
       error:(err) => err.data
     })
 
