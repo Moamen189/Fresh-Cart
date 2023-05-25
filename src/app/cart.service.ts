@@ -19,5 +19,11 @@ export class CartService {
   return this._HttpClient.post(`https://route-ecommerce.onrender.com/api/v1/cart` , {productId:productId} ,{headers:this.headers} )
 }
 
+GetLoggedUserCart():Observable<any>
+{
+  return this._HttpClient.get(`https://route-ecommerce.onrender.com/api/v1/cart`  ,{headers:this.headers} )
+}
+
+
 }
 
