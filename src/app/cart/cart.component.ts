@@ -19,6 +19,22 @@ export class CartComponent implements OnInit {
       error:(err) => err.data
     })
 
+
+
+
+  }
+
+
+  UpdateItem(productId:string , count:number){
+    this._CartService.UpdateCart(productId,count).subscribe({
+      //render
+      next:(res) =>{this.cartDetails = res.data },
+      error:(err) => err.data
+    })
+
+
+
+
   }
 
   ngOnInit(): void {
