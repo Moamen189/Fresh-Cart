@@ -24,6 +24,12 @@ GetLoggedUserCart():Observable<any>
   return this._HttpClient.get(`https://route-ecommerce.onrender.com/api/v1/cart`  ,{headers:this.headers} )
 }
 
+deleteToCart(productId:string):Observable<any>
+{
+  return this._HttpClient.delete(`https://route-ecommerce.onrender.com/api/v1/cart/${productId}`   ,{headers:this.headers} )
+}
+
+
 
 }
 

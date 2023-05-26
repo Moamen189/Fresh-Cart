@@ -12,6 +12,15 @@ export class CartComponent implements OnInit {
 
   constructor(private _CartService:CartService) { }
 
+  removeItem(productId:string){
+    this._CartService.deleteToCart(productId).subscribe({
+      //render
+      next:(res) =>{this.cartDetails = res.data },
+      error:(err) => err.data
+    })
+
+  }
+
   ngOnInit(): void {
 
     this._CartService.GetLoggedUserCart().subscribe({
