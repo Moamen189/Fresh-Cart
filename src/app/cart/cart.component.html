@@ -15,9 +15,9 @@
       <div>
 
 
-        <button (click)="UpdateItem(product.product._id , product.count)" class="btn">+</button>
+        <button (click)="UpdateItem(product.product._id , product.count +1)" class="btn">+</button>
         <span class="mx-2">{{product.count}}</span>
-        <button (click)="UpdateItem(product.product._id , product.count)" class="btn">-</button>
+        <button (click)="UpdateItem(product.product._id , product.count-1)" class="btn">-</button>
 
       </div>
 
