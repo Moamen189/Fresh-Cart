@@ -15,13 +15,14 @@ import { NavbarComponent } from './navbar/navbar.component';
 import { NotFoundComponent } from './not-found/not-found.component';
 import { RegisterComponent } from './register/register.component';
 import { ProductsComponent } from './products/products.component';
-import { HttpClientModule } from '@angular/common/http';
+import { HTTP_INTERCEPTORS, HttpClientModule } from '@angular/common/http';
 import { PrdouctdetailsComponent } from './prdouctdetails/prdouctdetails.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { CarouselModule } from 'ngx-owl-carousel-o';
 import { MainsliderComponent } from './mainslider/mainslider.component';
 import { BuyPipe } from './buy.pipe';
 import { SearchPipe } from './search.pipe';
+import { HeaderInterceptor } from './header.interceptor';
 
 @NgModule({
   declarations: [
@@ -54,7 +55,18 @@ import { SearchPipe } from './search.pipe';
 
 
   ],
-  providers: [],
+  providers: [
+    {
+      provide:HTTP_INTERCEPTORS ,
+      useClass:HeaderInterceptor,
+      multi:true
+    }
+
+
+
+
+
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
