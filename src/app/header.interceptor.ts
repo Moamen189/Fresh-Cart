@@ -20,9 +20,9 @@ export class HeaderInterceptor implements HttpInterceptor {
       let token:any = localStorage.getItem('userToken')
 
 
-    request.clone({
+    let UpdatedRequest = request.clone({
       headers: request.headers.set('token' , token)
     })
-    return next.handle(request);
+    return next.handle(UpdatedRequest);
   }
 }
