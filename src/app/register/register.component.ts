@@ -30,7 +30,21 @@ import { Router } from '@angular/router';
     rePassword: new FormControl(null , [Validators.required , Validators.pattern(/^[A-Z]/)]),
     phone: new FormControl(null , [Validators.required])
 
-  })
+  } , {validators: this.rePasswordMatch})
+
+  rePasswordMatch(registerForm:any){
+    let passowrdControl = registerForm.get('password')
+    let RepassowrdControl = registerForm.get('repassword')
+
+    if ( passowrdControl.value == RepassowrdControl.value){
+      return null;
+    }else{
+      RepassowrdControl.serErrors({passwordMatch : 'Password and rePassword Not Mactch '})
+      return {passwordMatch : 'Password and rePassword Not Mactch '}
+    }
+
+
+  }
 
   handlelRegister(registerForm:FormGroup){
     this.isLoading = true;

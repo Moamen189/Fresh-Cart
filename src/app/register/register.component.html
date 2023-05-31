@@ -36,7 +36,7 @@
     <input formControlName="rePassword" type="password" class="form-control mb-2" id="rePassword">
 
     <div *ngIf="registerForm.get('rePassword')?.errors && registerForm.get('rePassword')?.touched" class="alert alert-danger">
-      <p *ngIf="registerForm.get('rePassword')?.getError('pattern')" class="m-0">RePassword is Unvalid</p>
+      <p *ngIf="registerForm.get('rePassword')?.getError('passwordMatch')" class="m-0">RePassword is not match</p>
       <p *ngIf="registerForm.get('rePassword')?.getError('required')" class="m-0">RePassword is Required</p>
 
     </div>
